@@ -1,5 +1,9 @@
+import { RouterProvider } from "react-router-dom";
+
+import Routes from "./routes/main.route";
+
 function App() {
-  return <>CHAT-FE</>;
+  return <RouterProvider router={Routes} />;
 }
 
 export default App;
