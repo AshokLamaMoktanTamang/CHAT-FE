@@ -23,3 +23,9 @@ export interface IResetPasswordPayload {
   otp: number;
   password: string;
 }
+
+export interface ISetPasswordPayload {
+  userId: string;
+  token: string;
+  password: string;
+}

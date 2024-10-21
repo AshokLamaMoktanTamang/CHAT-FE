@@ -4,6 +4,7 @@ import {
   ILoginPayload,
   ILoginResponse,
   IResetPasswordPayload,
+  ISetPasswordPayload,
   ISignUpPayload,
 } from "./types";
 
@@ -37,6 +38,13 @@ export const authApiSlice = baseApi.injectEndpoints({
         data,
       }),
     }),
+    postSetPassword: builder.mutation<ILoginResponse, ISetPasswordPayload>({
+      query: (data) => ({
+        url: `auth/set-password`,
+        method: "POST",
+        data,
+      }),
+    }),
   }),
 });
 
@@ -45,4 +53,5 @@ export const {
   usePostSignUpMutation,
   usePostForgotPasswordMutation,
   usePostResetPasswordMutation,
+  usePostSetPasswordMutation,
 } = authApiSlice;

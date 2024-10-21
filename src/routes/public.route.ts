@@ -36,4 +36,12 @@ export const authLayoutRoutes: ChildrenRouteElement[] = [
       return OtpVerificationPage;
     },
   },
+  {
+    path: PUBLIC_ROUTES.setPassword,
+    type,
+    component: async () => {
+      const { SetPasswordPage } = await import("@/pages/auth/index");
+      return SetPasswordPage;
+    },
+  },
 ];

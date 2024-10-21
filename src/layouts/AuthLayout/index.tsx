@@ -9,6 +9,7 @@ const header = {
   [PUBLIC_ROUTES.signUp]: "Register for Free!",
   [PUBLIC_ROUTES.forgotPassword]: "Forgot Password",
   [PUBLIC_ROUTES.otpVerification]: "Verify The OTP",
+  [PUBLIC_ROUTES.setPassword]: "Set Password",
 };
 
 const AuthLayout = () => {

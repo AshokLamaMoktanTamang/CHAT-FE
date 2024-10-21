@@ -3,6 +3,7 @@ export const PUBLIC_ROUTES = {
   signUp: "/signup",
   forgotPassword: "/forgot-password",
   otpVerification: "/forgot-password/otp",
+  setPassword: "/set-password",
 };
 
 export const PRIVATE_ROUTES = {
