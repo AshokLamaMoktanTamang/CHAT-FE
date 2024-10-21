@@ -26,7 +26,12 @@ const useAuth = () => {
     );
   }, []);
 
-  return { loginHandler, signUpHandler };
+  const logoutHandler = useCallback(() => {
+    clearStorage();
+    navigate(PUBLIC_ROUTES.login);
+  }, []);
+
+  return { loginHandler, signUpHandler, logoutHandler };
 };
 
 export default useAuth;

@@ -1,10 +1,18 @@
-import { createApi } from '@reduxjs/toolkit/query/react'
-import axiosBaseQuery from '@/store/axiosBaseQuery'
+import { createApi } from "@reduxjs/toolkit/query/react";
+import axiosBaseQuery from "@/store/axiosBaseQuery";
+
+import { IUser } from "./type";
 
 const baseApi = createApi({
-  reducerPath: 'baseApiReducer',
+  reducerPath: "baseApiReducer",
   baseQuery: axiosBaseQuery(),
-  endpoints: () => ({}),
-})
+  endpoints: (builder) => ({
+    whoAmI: builder.query<IUser, void>({
+      query: () => ({ url: "user", method: "GET" }),
+    }),
+  }),
+});
 
-export default baseApi
+export const { useWhoAmIQuery } = baseApi;
+
+export default baseApi;

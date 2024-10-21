@@ -19,6 +19,13 @@ import {
   InputOTPSlot,
   HookOtpInput,
 } from "./OtpInput";
+import { Avatar, AvatarFallback, AvatarImage, FullAvatar } from "./Avatar";
+import {
+  Popover,
+  PopoverAnchor,
+  PopoverContent,
+  PopoverTrigger,
+} from "./PopOver";
 
 export {
   Button,
@@ -39,4 +46,12 @@ export {
   InputOTPSeparator,
   InputOTPSlot,
   HookOtpInput,
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+  FullAvatar,
+  Popover,
+  PopoverAnchor,
+  PopoverContent,
+  PopoverTrigger,
 };
