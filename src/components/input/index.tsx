@@ -40,7 +40,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = "Input";
 
 const HookInput = forwardRef<HTMLInputElement, HookInputProps>(
-  ({ name, required, validate, disabled, defaultValue, ...rest }, ref) => {
+  (
+    { name, required, validate, disabled, defaultValue, label, ...rest },
+    ref
+  ) => {
     const { control } = useFormContext();
 
     return (
@@ -64,6 +67,7 @@ const HookInput = forwardRef<HTMLInputElement, HookInputProps>(
             defaultValue={defaultValue}
             disabled={disabled}
             error={Boolean(error)}
+            label={required && label ? label + " *" : label}
             errorNode={error && <HookErrorMessage message={error.message} />}
           />
         )}

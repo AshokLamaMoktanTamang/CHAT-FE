@@ -12,6 +12,13 @@ import {
   CardHeader,
   CardTitle,
 } from "./Card";
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSeparator,
+  InputOTPSlot,
+  HookOtpInput,
+} from "./OtpInput";
 
 export {
   Button,
@@ -27,4 +34,9 @@ export {
   CardFooter,
   CardHeader,
   CardTitle,
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSeparator,
+  InputOTPSlot,
+  HookOtpInput,
 };

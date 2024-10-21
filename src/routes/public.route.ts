@@ -20,4 +20,20 @@ export const authLayoutRoutes: ChildrenRouteElement[] = [
       return SignUpPage;
     },
   },
+  {
+    path: PUBLIC_ROUTES.forgotPassword,
+    type,
+    component: async () => {
+      const { ForgotPasswordPage } = await import("@/pages/auth/index");
+      return ForgotPasswordPage;
+    },
+  },
+  {
+    path: PUBLIC_ROUTES.otpVerification,
+    type,
+    component: async () => {
+      const { OtpVerificationPage } = await import("@/pages/auth/index");
+      return OtpVerificationPage;
+    },
+  },
 ];

@@ -5,6 +5,7 @@ const regex = {
   containsUpperLowerCaseCharacter: /^(?=.*[a-z])(?=.*[A-Z]).+$/,
   containsLowerCaseCharacter: /^(?=.*[a-z]).+$/,
   containsUpperCaseCharacter: /^(?=.*[A-Z]).+$/,
+  name: /^[\w\s]+$/,
 };
 
 const validateEmail = (email: any) => {
@@ -17,4 +18,12 @@ const validateEmail = (email: any) => {
   return "Invalid email address.";
 };
 
-export { validateEmail };
+const validateName = (name: any) => {
+  const isValidName = regex.name.test(name);
+  if (isValidName) {
+    return undefined;
+  }
+  return "Please enter valid name";
+};
+
+export { validateEmail, validateName };
